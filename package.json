@@ -1,0 +1,29 @@
+{
+  "name": "cypress-typescript-project",
+  "version": "1.0.0",
+  "scripts": {
+  "lint": "eslint 'cypress/**/*.ts' 'cypress/**/*.js' --ext .ts,.js",
+  "lint:fix": "eslint \"**/*.ts\" \"**/*.js\" --ext .ts,.js --fix",
+  "format": "prettier --write 'cypress/**/*.{ts,js,json,css,md}'"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "cypress": "^12.0.0",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^9.1.2",
+    "eslint-plugin-filenames-simple": "^0.9.0",
+    "eslint-plugin-prettier": "^5.5.4",
+    "husky": "^9.1.7",
+    "lint-staged": "^14.0.1",
+    "prettier": "^3.6.2"
+  },
+  "lint-staged": {
+    "**/*.{js,ts,json,css,md}": [
+      "prettier --write"
+    ],
+    "**/*.{js,ts}": [
+      "eslint --fix"
+    ]
+  }
+}
