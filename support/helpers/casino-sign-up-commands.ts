@@ -3,9 +3,9 @@
 // This file contains custom Cypress commands and helper functions for the Sign-Up process.
 
 //use  reuseable custom command to generate user data
-import {customerDetails} from './utils'
+import {customerDetails} from '../utils'
 
-// Helper: Map month names to numbers for assertions , as element capture by number
+// Helper: Map month names to numbers for assertions , as element capture by number instead of text 
 const monthNameToNumber = {
     January: '1',
     February: '2',

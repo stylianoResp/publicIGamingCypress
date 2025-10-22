@@ -1,5 +1,6 @@
+import { EnumEnvironmentName, EnumBrands } from '../support/safety-type-enum-parameters';
 // Define the possible environment names for the app
-export type EnvironmentName = 'production' | 'staging' | 'development';
+export type EnvironmentName = EnumEnvironmentName;
 
 // Configuration interface for the environment
 export interface EnvironmentConfig { 
@@ -9,9 +10,11 @@ export interface EnvironmentConfig {
 
 // Configuration interface for a brand
 export interface BrandConfig {
-  name: string; // Brand name
+  name: EnumBrands; // Brand name
   url: string;  // Brand URL
 }
+
+//Configuration for types User
 export type User =
   | { role: 'depositor' | 'vip' | 'nondepositor' ; email: string; password: string }
   | { role: 'guest' ; email?: never; password?: never };

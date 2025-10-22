@@ -1,5 +1,5 @@
 import {user} from "./users";
-import {EnvironmentName,EnvironmentConfig} from "../../env.config";
+import {EnvironmentName,EnvironmentConfig} from "../../support/env.config";
 
 export const environmentData: Record<EnvironmentName, EnvironmentConfig> = {
   production: {

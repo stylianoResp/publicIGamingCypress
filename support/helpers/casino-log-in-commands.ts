@@ -3,7 +3,7 @@
 // It uses fixture files to retrieve user credentials generated during registration.
 
 import type { User } from "../env.config"
-import { environmentData } from "../fixtures/environments/brands"
+import { environmentData } from "../../fixtures/environments/brands"
 
 const users: User[] = environmentData['production'].users;
 
@@ -59,7 +59,7 @@ const logInCredentials = (itsInvalidPassword = false) => {
 
 // Main logIn command
 // Accepts a logInType string to determine which scenario to run
-const logIn = (logInType:string): void => {
+const logIn = (logInType) => {
     switch (logInType) {
         case 'areInvalidCredentials':
             // Attempt login with invalid password
